@@ -1,0 +1,85 @@
+
+
+
+<!-------------------------------------------Generador QR------------------------------------------------------>
+
+
+<div style=" text-align: center;" id="imprimible">
+      <div class="contenedor-flexbox">
+        <div style="width:50%; display:inline-block; text-align: right;">
+            <qrcode
+            [qrdata]="dataobj5.episode"
+            [allowEmptyString]="true"
+            [alt]="'A custom alt attribute'"
+            [ariaLabel]="'QR Code image with the following content...'"
+            [cssClass]="'center'"
+            [colorDark]="'#000000ff'"
+            [colorLight]="'#ffffffff'"
+            [elementType]="'img'"
+            [errorCorrectionLevel]="'M'"
+            [margin]="4"
+            [scale]="1"
+            [title]="'A custom title attribute'"
+            [width]="140"
+          ></qrcode>   
+        
+        </div>
+        <div style="width:50%; display:inline-block; text-align: left;">
+            <h1>&nbsp; {{dataobj5.name}}</h1>
+            <h1>&nbsp; {{dataobj5.species}}</h1>
+            <h1>&nbsp; {{dataobj5.status}}</h1>
+        </div>
+    </div>
+</div>
+
+<div style=" text-align: center;" >
+  <button class="btn btn-primary"  id="btnImprimirDiv">Imprimir</button>
+<br><br>
+  <div id="boton" onclick="divLogin()" >
+    <button class="btn btn-primary" >Escanear QR</button>
+  </div>
+  
+</div>
+  
+<br><br>
+
+<!------------------------------------------Lector QR------------------------------------------------------>
+
+<div id="caja" style="text-align: center; display: none;">
+  
+  <select #selectList (change)="selectCamera(selectList.value)">
+    <option *ngFor="let camera of cameras" value={{camera.label}}>
+     {{ camera.label }}
+    </option>
+  </select>
+
+  <br><br>
+<div class="contenedor2-flexbox">
+
+<div style="width:50%; display:inline-block; text-align: right;"> 
+<zxing-scanner 
+  style="width: 400px; margin: 0 0 0 calc(((100% - 1140px) / 2) + 490px);"
+  [enable]="scannerEnabled"
+  [device]="myDevice"
+  (camerasFound)="camerasFoundHandler($event)"
+  (scanSuccess)="scanSuccessHandler($event)"
+></zxing-scanner>
+
+</div>
+
+
+<div style="width:50%; display:inline-block; text-align: left;" id="padre">
+
+
+
+<p *ngFor="let result of results">{{result}}</p>
+
+
+</div>
+</div>
+
+<br>
+<div style=" text-align: center;" >
+<button onclick="aliminarHijos()"  type="button" name="button">Completo</button>
+</div>
+</div>
