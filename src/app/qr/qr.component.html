@@ -2,35 +2,44 @@
 
 
 <!-------------------------------------------Generador QR------------------------------------------------------>
+<div id="imprimible">
+  <div id="contenedor">
+    
 
-
-<div style=" text-align: center;" id="imprimible">
-      <div class="contenedor-flexbox">
-        <div style="width:50%; display:inline-block; text-align: right;">
-            <qrcode
-            [qrdata]="dataobj5.episode"
-            [allowEmptyString]="true"
-            [alt]="'A custom alt attribute'"
-            [ariaLabel]="'QR Code image with the following content...'"
-            [cssClass]="'center'"
-            [colorDark]="'#000000ff'"
-            [colorLight]="'#ffffffff'"
-            [elementType]="'img'"
-            [errorCorrectionLevel]="'M'"
-            [margin]="4"
-            [scale]="1"
-            [title]="'A custom title attribute'"
-            [width]="140"
-          ></qrcode>   
+    <div id="qr"> 
+     <qrcode
+          [qrdata]="dataobj5.episode"
+          [allowEmptyString]="true"
+          [alt]="'A custom alt attribute'"
+          [ariaLabel]="'QR Code image with the following content...'"
+          [cssClass]="'left'"
+          [colorDark]="'#000000ff'"
+          [colorLight]="'#ffffffff'"
+          [elementType]="'img'"
+          [errorCorrectionLevel]="'M'"
+          [margin]="4"
+          [scale]="1"
+          [title]="'A custom title attribute'"
+          [width]="97"
+      ></qrcode>   
         
-        </div>
-        <div style="width:50%; display:inline-block; text-align: left;">
-            <h1>&nbsp; {{dataobj5.name}}</h1>
-            <h1>&nbsp; {{dataobj5.species}}</h1>
-            <h1>&nbsp; {{dataobj5.status}}</h1>
-        </div>
     </div>
+        
+    <div id="datoos">
+            <h1>{{dataobj5.name}}</h1>
+            <h1>{{dataobj5.species}}</h1>
+            <h1>{{dataobj5.created}}</h1>
+    </div>
+
+    <div id="titulo" >
+      <h1>Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán</h1>
+    </div>
+  </div>
 </div>
+
+
+
+
 
 <div style=" text-align: center;" >
   <button class="btn btn-primary"  id="btnImprimirDiv">Imprimir</button>

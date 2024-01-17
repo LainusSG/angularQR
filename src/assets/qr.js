@@ -2,9 +2,9 @@
 //-------------------------------------------------- Imprimir Div --------------------------------------------------
 function imprimirElemento(elemento) {
   var ventana = window.open('()','PRINT', 'height=400,width=600');
-  ventana.document.write('<link rel="stylesheet" href="style.css">'); //Aquí agregué la hoja de estilos
+  ventana.document.write('<link rel="stylesheet" href="../assets/impresion.css">'); //Aquí agregué la hoja de estilos
   ventana.document.write('<body>');
-  ventana.document.write('<center>' + elemento.innerHTML + '</center>');
+  ventana.document.write(elemento.innerHTML);
   ventana.document.write('</body>');
   ventana.document.close();
   ventana.focus();
