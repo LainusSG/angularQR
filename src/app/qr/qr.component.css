@@ -13,35 +13,48 @@
   width: 7cm;
   display: flex;
   flex-wrap: wrap-reverse;
-}
-
-
-#titulo{
-  width:7cm; 
-  height: .8cm;
-  font-size: 5px;
-  text-align: center;
-  justify-content: center; 
+  justify-content: left; 
   align-items: center;
 }
 
 
+#titulo{
+  margin-left: .8cm;
+margin-top: -5px;
+  width:5.9cm; 
+  height: .6cm;
+  font-size: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  text-align: center;
+}
+
+
 #qr {
+  margin-left: .8cm;
   display: grid;
-  width:3cm; 
+  width:2.90cm; 
   height: 2.7cm;
   font-size: 5px;
+  font-family: 'Courier New', Courier, monospace;
   text-align: right;
-  justify-content: center; 
+  justify-content: right; 
   align-items: center;
 }
 
 
 #datoos {
-  font-size: 5px;
+  font-size: 4.5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
   display: grid;
-  width:4cm; 
+  width:3cm; 
   height: 2.7cm;
   text-align: left;
 }
 
+.fotoqr{
+margin-left: -170px;
+margin-bottom: -130px;
+position: relative;
+width: 22px;
+height: 22px;
+}

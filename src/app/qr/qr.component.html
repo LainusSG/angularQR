@@ -4,42 +4,44 @@
 <!-------------------------------------------Generador QR------------------------------------------------------>
 <div id="imprimible">
   <div id="contenedor">
-    
-
     <div id="qr"> 
+      <!--aquí iran los Api en vez del nomre ira el contenido del set {{obj1.setcontenido}}-->
+      
      <qrcode
-          [qrdata]="dataobj5.episode"
+          [qrdata]="'jeringas desechables, cánulas, paños quirúrgicos y recipientes para desinfectantes de la piel'"
           [allowEmptyString]="true"
           [alt]="'A custom alt attribute'"
           [ariaLabel]="'QR Code image with the following content...'"
           [cssClass]="'left'"
           [colorDark]="'#000000ff'"
           [colorLight]="'#ffffffff'"
-          [elementType]="'img'"
-          [errorCorrectionLevel]="'M'"
-          [margin]="4"
+          [elementType]="'svg'"
+          [errorCorrectionLevel]="'L'"
+          [margin]="2"
           [scale]="1"
           [title]="'A custom title attribute'"
           [width]="97"
       ></qrcode>   
         
     </div>
+    
         
     <div id="datoos">
-            <h1>{{dataobj5.name}}</h1>
-            <h1>{{dataobj5.species}}</h1>
-            <h1>{{dataobj5.created}}</h1>
+            <h1>Nombre: <br><!--aquí iran los Api en vez del nomre {{obj1.name}}-->José Lino Santos García</h1>
+            <h1>Set: <br><!--aquí iran los Api en vez del nomre {{obj1.set}}-->Set de Laparatomía</h1>
+            <h1>Fecha de Caducidad: <br><!--aquí iran los Api en vez del nomre {{obj1.fecha}}-->20-11-2023</h1>
+
     </div>
 
     <div id="titulo" >
       <h1>Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán</h1>
-    </div>
+    </div>  <img src="../../assets/Smartest.png" class="fotoqr">
   </div>
 </div>
 
 
 
-
+<img src="../../assets/Smartest.png" class="fotoqr">  
 
 <div style=" text-align: center;" >
   <button class="btn btn-primary"  id="btnImprimirDiv">Imprimir</button>
